@@ -69,7 +69,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(1138-4EB, Geeetech Průša i3 Pro B BLTouch config)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Ben Mens" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -600,9 +600,9 @@
     #define DEFAULT_Kd_LIST {  74.50,  74.50 }
   #else
     // Geeetech MK8 Extruder
-    #define DEFAULT_Kp  12.33
-    #define DEFAULT_Ki   0.51
-    #define DEFAULT_Kd  74.50
+    #define DEFAULT_Kp 12.86
+    #define DEFAULT_Ki 0.58
+    #define DEFAULT_Kd 71.90
 
     // CTC MK8 Extruder
     //#define DEFAULT_Kp  19.86
@@ -920,11 +920,11 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define PRO_B_WITH_LEADSCREW
+// #define PRO_B_WITH_LEADSCREW
 #if ENABLED(PRO_B_WITH_LEADSCREW)       // M8 leadscrew version
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 78.74, 78.74, 400, 105 }
 #else                                   // M8 threaded rod version
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 78.74, 78.74, 2560, 105 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   {78.74, 78.74, 2560, 105 }
 #endif
 
 /**
@@ -945,7 +945,8 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 5000, 5000, 75, 5000 }
+#define DEFAULT_MAX_ACCELERATION      { 1500, 1000, 50, 5000 }
+
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -962,7 +963,7 @@
  */
 #define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION   1500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -1178,11 +1179,11 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 4, -44, -1.4 }
+#define NOZZLE_TO_PROBE_OFFSET { 4, -47, -2 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 10
+#define PROBING_MARGIN 15
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
@@ -1369,7 +1370,7 @@
 
 // The size of the printable area
 #define X_BED_SIZE 200
-#define Y_BED_SIZE 200
+#define Y_BED_SIZE 170
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS -12
@@ -1783,9 +1784,10 @@
 
 #if ENABLED(SKEW_CORRECTION)
   // Input all length measurements here:
-  #define XY_DIAG_AC 282.8427124746
-  #define XY_DIAG_BD 281.8196945719
-  #define XY_SIDE_AD 200
+  // Gemeten op 5-8-2021 door Ben Mens
+  #define XY_DIAG_AC 140.63
+  #define XY_DIAG_BD 141.36
+  #define XY_SIDE_AD 99.39
 
   // Or, set the default skew factors directly here
   // to override the above measurements:
@@ -1803,7 +1805,7 @@
   #endif
 
   // Enable this option for M852 to set skew at runtime
-  #define SKEW_CORRECTION_GCODE
+  //#define SKEW_CORRECTION_GCODE
 #endif
 
 //=============================================================================
@@ -1855,8 +1857,8 @@
 // Preheat Constants - Up to 5 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 200
-#define PREHEAT_1_TEMP_BED     60
+#define PREHEAT_1_TEMP_HOTEND 210
+#define PREHEAT_1_TEMP_BED     55
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED   170 // Value from 0 to 255
 
