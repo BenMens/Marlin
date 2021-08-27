@@ -600,9 +600,9 @@
     #define DEFAULT_Kd_LIST {  74.50,  74.50 }
   #else
     // Geeetech MK8 Extruder
-    #define DEFAULT_Kp 12.86
-    #define DEFAULT_Ki 0.58
-    #define DEFAULT_Kd 71.90
+    #define DEFAULT_Kp 12.95
+    #define DEFAULT_Ki 0.50
+    #define DEFAULT_Kd 84.59
 
     // CTC MK8 Extruder
     //#define DEFAULT_Kp  19.86
@@ -920,11 +920,11 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-// #define PRO_B_WITH_LEADSCREW
+#define PRO_B_WITH_LEADSCREW
 #if ENABLED(PRO_B_WITH_LEADSCREW)       // M8 leadscrew version
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 78.74, 78.74, 400, 105 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.72, 80.40, 400, 105 }
 #else                                   // M8 threaded rod version
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   {78.74, 78.74, 2560, 105 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.72, 80.40, 2560, 105 }
 #endif
 
 /**
@@ -1179,7 +1179,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 4, -47, -2 }
+#define NOZZLE_TO_PROBE_OFFSET { 4, -47, -0.5 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
