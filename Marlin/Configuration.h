@@ -922,7 +922,7 @@
  */
 #define PRO_B_WITH_LEADSCREW
 #if ENABLED(PRO_B_WITH_LEADSCREW)       // M8 leadscrew version
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 81.12, 80.40, 400, 105 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.66, 80.66, 400, 97.5 }
 #else                                   // M8 threaded rod version
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.72, 80.40, 2560, 105 }
 #endif
@@ -1252,7 +1252,7 @@
 #define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
-#define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
+#define Z_PROBE_LOW_POINT          -3 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
 #define Z_PROBE_OFFSET_RANGE_MIN -20
@@ -1784,10 +1784,10 @@
 
 #if ENABLED(SKEW_CORRECTION)
   // Input all length measurements here:
-  // Gemeten op 5-8-2021 door Ben Mens
-  #define XY_DIAG_AC 140.63
-  #define XY_DIAG_BD 141.36
-  #define XY_SIDE_AD 99.39
+  // Gemeten op 2-6-2022 door Ben Mens
+  #define XY_DIAG_AC 141.67
+  #define XY_DIAG_BD 142.05
+  #define XY_SIDE_AD 100.47
 
   // Or, set the default skew factors directly here
   // to override the above measurements:
