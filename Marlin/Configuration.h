@@ -922,9 +922,9 @@
  */
 #define PRO_B_WITH_LEADSCREW
 #if ENABLED(PRO_B_WITH_LEADSCREW)       // M8 leadscrew version
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.66, 80.66, 400, 97.5 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.31, 80.31, 400, 97.5 }
 #else                                   // M8 threaded rod version
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.72, 80.40, 2560, 105 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.31, 80.31, 2560, 97.5 }
 #endif
 
 /**
@@ -1179,7 +1179,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 4, -47, -0.9 }
+#define NOZZLE_TO_PROBE_OFFSET { 4, -47, -1.509 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1784,10 +1784,10 @@
 
 #if ENABLED(SKEW_CORRECTION)
   // Input all length measurements here:
-  // Gemeten op 2-6-2022 door Ben Mens
-  #define XY_DIAG_AC 141.67
-  #define XY_DIAG_BD 142.05
-  #define XY_SIDE_AD 100.47
+  // Gemeten op 3-6-2022 door Ben Mens
+  #define XY_DIAG_AC 141.02
+  #define XY_DIAG_BD 141.47
+  #define XY_SIDE_AD 99.82
 
   // Or, set the default skew factors directly here
   // to override the above measurements:
