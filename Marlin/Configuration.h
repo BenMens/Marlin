@@ -600,9 +600,10 @@
     #define DEFAULT_Kd_LIST {  74.50,  74.50 }
   #else
     // Geeetech MK8 Extruder
-    #define DEFAULT_Kp 12.95
-    #define DEFAULT_Ki 0.50
-    #define DEFAULT_Kd 84.59
+    #define DEFAULT_Kp 23.68
+    #define DEFAULT_Ki 1.41 
+    #define DEFAULT_Kd 99.43
+
 
     // CTC MK8 Extruder
     //#define DEFAULT_Kp  19.86
@@ -1179,7 +1180,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 4, -47, -1.509 }
+#define NOZZLE_TO_PROBE_OFFSET { 4, -47, -1.611 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1785,9 +1786,9 @@
 #if ENABLED(SKEW_CORRECTION)
   // Input all length measurements here:
   // Gemeten op 3-6-2022 door Ben Mens
-  #define XY_DIAG_AC 141.02
-  #define XY_DIAG_BD 141.47
-  #define XY_SIDE_AD 99.82
+  #define XY_DIAG_AC 140.93
+  #define XY_DIAG_BD 141.53
+  #define XY_SIDE_AD 99.66
 
   // Or, set the default skew factors directly here
   // to override the above measurements:
