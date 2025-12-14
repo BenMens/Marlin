@@ -1033,7 +1033,7 @@
 //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
-//#define USE_PROBE_FOR_Z_HOMING
+#define USE_PROBE_FOR_Z_HOMING
 
 /**
  * Z_MIN_PROBE_PIN
@@ -1552,10 +1552,10 @@
 /**
  * Auto-leveling needs preheating
  */
-//#define PREHEAT_BEFORE_LEVELING
+#define PREHEAT_BEFORE_LEVELING
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
-  #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
-  #define LEVELING_BED_TEMP     50
+  #define LEVELING_NOZZLE_TEMP 0   // (°C) Only applies to E0 at this time
+  #define LEVELING_BED_TEMP    55
 #endif
 
 /**
@@ -1785,10 +1785,14 @@
 
 #if ENABLED(SKEW_CORRECTION)
   // Input all length measurements here:
+  // Gemeten op 25-6-2024 door Ben Mens
+  #define XY_DIAG_AC 140.76
+  #define XY_DIAG_BD 141.23
+  #define XY_SIDE_AD 99.61
   // Gemeten op 3-6-2022 door Ben Mens
-  #define XY_DIAG_AC 140.93
-  #define XY_DIAG_BD 141.53
-  #define XY_SIDE_AD 99.66
+  // #define XY_DIAG_AC 140.93
+  // #define XY_DIAG_BD 141.53
+  // #define XY_SIDE_AD 99.66
 
   // Or, set the default skew factors directly here
   // to override the above measurements:
