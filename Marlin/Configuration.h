@@ -923,7 +923,7 @@
  */
 #define PRO_B_WITH_LEADSCREW
 #if ENABLED(PRO_B_WITH_LEADSCREW)       // M8 leadscrew version
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.31, 80.31, 400, 97.5 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 81.699, 80.613, 400, 97.3 }
 #else                                   // M8 threaded rod version
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.31, 80.31, 2560, 97.5 }
 #endif
@@ -1180,7 +1180,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 4, -47, -1.611 }
+#define NOZZLE_TO_PROBE_OFFSET { 4, -47, -2.167 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1232,7 +1232,7 @@
  * A total of 3 or more adds more slow probes, taking the average.
  */
 #define MULTIPLE_PROBING 3
-//#define EXTRA_PROBING    1
+#define EXTRA_PROBING    1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -1785,10 +1785,10 @@
 
 #if ENABLED(SKEW_CORRECTION)
   // Input all length measurements here:
-  // Gemeten op 25-6-2024 door Ben Mens
-  #define XY_DIAG_AC 140.76
-  #define XY_DIAG_BD 141.23
-  #define XY_SIDE_AD 99.61
+  // Gemeten op 14-12-2025 door Ben Mens
+  #define XY_DIAG_AC 141.76
+  #define XY_DIAG_BD 142.26
+  #define XY_SIDE_AD 100.66
   // Gemeten op 3-6-2022 door Ben Mens
   // #define XY_DIAG_AC 140.93
   // #define XY_DIAG_BD 141.53
